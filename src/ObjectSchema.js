@@ -1,1 +1,5 @@
-export default class ObjectSchema {}
+export default class ObjectSchema {
+	isValid(value) {
+		return;
+	}
+}
