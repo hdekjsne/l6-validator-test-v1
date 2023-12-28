@@ -24,21 +24,5 @@ export default class ArraySchema {
 			.map((item) => this.customValidator(item))
 			.includes(false);
 		return isValid;
-		/*
-		if (!Array.isArray(value)) return false;
-		const validations = [
-			...(
-				this.allIntegers === true
-					? value.map((item) => typeof item === 'number')
-					: [true]
-			),
-			(
-				this.customValidator !== 'none'
-					?	value.map((item) => this.customValidator(item))
-					: [true]
-			)
-		];
-		return !validations.includes(false);
-		*/
 	}
 }
